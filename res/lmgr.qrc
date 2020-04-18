@@ -1,0 +1,24 @@
+<RCC>
+    <qresource prefix="/ico">
+        <file>ico/app.ico</file>
+    </qresource>
+    <qresource prefix="/png">
+        <file>png/import.png</file>
+        <file>png/export.png</file>
+        <file>png/open.png</file>
+        <file>png/save.png</file>
+        <file>png/flash.png</file>
+        <file>png/exit.png</file>
+        <file>png/info.png</file>
+        <file>png/help.png</file>
+        <file>png/con-chk.png</file>
+        <file>png/con-err.png</file>
+        <file>png/con-suc.png</file>
+        <file>png/mail-48.png</file>
+        <file>png/mail-64.png</file>
+        <file>png/home-48.png</file>
+        <file>png/home-64.png</file>
+        <file>png/gift-48.png</file>
+        <file>png/gift-64.png</file>
+    </qresource>
+</RCC>

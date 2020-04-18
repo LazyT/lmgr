@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+	<id>de.lazyt.lmgr</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<project_license>GPL-2.0+</project_license>
+	<name>Logo Manager</name>
+	<summary>Manage Xiaomi Splash Screens</summary>
+	<description>
+	    <p>
+		View, Edit, Flash logo.img Splash Screens for some Xiaomi Smartphones
+	    </p>
+	</description>
+	<screenshots>
+	    <screenshot type="default">
+		<image>https://raw.githubusercontent.com/LazyT/lmgr/gh-pages/screenshots/mainwindow.png</image>
+	    </screenshot>
+	</screenshots>
+	<url type="homepage">https://forum.xda-developers.com/k20-pro/themes/app-logo-manager-splash-screens-t4084455</url>
+	<url type="donation">https://paypal.me/LazyT</url>
+	<developer_name>Thomas "LazyT" Löwe</developer_name>
+	<provides>
+	    <id>lmgr.desktop</id>
+	</provides>
+</component>

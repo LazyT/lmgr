@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Logo Manager
+Exec=lmgr
+Icon=lmgr
+Type=Application
+Categories=Utility;
+Comment=Manage Splash Screens

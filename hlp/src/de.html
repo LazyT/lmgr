@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8"/>
+<title>Logo Manager Hilfe</title>
+</head>
+<body>
+
+<h1><img src="img/wizard.png"> Logo Manager</h1>
+<hr><p>
+
+Herzlich willkommen beim Logo Manager.
+
+Bitte lest erst aufmerksam die folgenden Informationen durch um eine Fehlbedienung und eventuelle Beschädigung eures Gerätes zu vermeiden!
+
+<h2 id="1"><img src="img/info.png"> <u><i>1. Allgemeines</i></u></h2>
+
+Logo Manager ist ein einfach zu bedienendes Tool um die Startbildschirme (logo.img) bestimmter Xiaomi Smartphones anzuzeigen, anzupassen und zu installieren.
+<p>
+Es basiert auf Qt und ist somit auf verschiedenen Betriebssystemen wie Windows, Linux und MacOS einsetzbar. Alle erforderlichen Dateien sind enthalten, sodass keine Installation erforderlich ist.
+
+<h2 id="2"><img src="img/show.png"> <u><i>2. Anzeigen von Logos</i></u></h2>
+
+Zum Anzeigen des Inhaltes eines logo.img kann dieses über "Öffnen" geladen werden.
+<p>
+Es werden nun die enthaltenen Logos angezeigt. Über jedem Logo stehen zusätzliche Details wie Auflösung, Position und Größe.
+
+<h2 id="3"><img src="img/edit.png"> <u><i>3. Anpassen von Logos</i></u></h2>
+
+Als Basis muss immer eine originale Datei für das Ziel-Gerät verwendet werden!
+<p>
+Diese bekommt man z.B. aus der Firmware-Datei von https://xiaomifirmwareupdater.com/firmware für das gewünschte Gerät.
+
+<h3 id="3.1"><img src="img/import.png"> <u><i>3.1 Importieren</i></u></h3>
+
+Über "Importieren" kann das jeweilige Logo durch ein Eigenes ersetzt werden. Dieses sollte möglichst die selbe Größe wie das Original haben, wird aber bei Bedarf auch entsprechend skaliert.
+<p>
+Nachdem alles angepasst wurde kann das neue Image über "Speichern" erzeugt werden.
+
+<h3 id="3.2"><img src="img/export.png"> <u><i>3.2 Exportieren</i></u></h3>
+
+Über "Exportieren" kann das jeweilige Logo extrahiert werden. Dabei werden die Formate BMP, JPG und PNG unterstützt.
+<p>
+Weiterhin können die Rohdaten als RAW gespeichert werden.
+
+<h2 id="4"><img src="img/flash.png"> <u><i>4. Installieren von Logos</i></u></h2>
+
+Logos können auch direkt auf das Gerät installiert werden. <font color="red"><b>Dies geschieht ausdrücklich auf eigene Gefahr und kann das Gerät beschädigen!</b></font>
+<p>
+Dazu muss der Bootloader entsperrt und Android-Debugging in den Entwickleroptionen aktiviert sein.
+<p>
+Sind diese Vorraussetzungen erfüllt kann das Gerät per USB-Kabel mit dem PC verbunden werden.
+<p>
+Nun wird über "Flashen" das gewünschte Image ausgewählt. Danach öffnet sich der Installationsdialog und es wird versucht das verbundene Gerät zu erkennen.
+<p>
+War dies erfolgreich wird das Gerät im Fastboot-Modus neu gestartet. Dies dauert ca. 5-10 Sekunden, also Geduld!
+<p>
+Anschließend wird das Image in die Logo-Partition installiert und das Gerät wieder ins System gestartet. Das neue Logo sollte dabei nun angezeigt werden.
+
+<h3 id="4.1"><img src="img/error.png"> <u><i>4.1 Probleme</i></u></h3>
+<p>
+<b>Problem :</b> es wird kein Gerät erkannt<br>
+<b>Lösung :</b> unter Windows kann es erforderlich sein die benötigten Treiber für adb/fastboot zu installieren
+<p>
+<b>Problem :</b> es erscheint "unauthorized device"<br>
+<b>Lösung :</b> auf dem Gerät die angezeigte Anfrage bestätigen
+<p>
+<b>Problem :</b> es erscheint "no permissions"<br>
+<b>Lösung :</b> auf dem Gerät den USB-Modus von Aufladen auf Übertragen ändern
+
+</body>
+</html>
