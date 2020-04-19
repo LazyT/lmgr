@@ -23,6 +23,7 @@
 #include <QHelpEngine>
 #include <QHelpContentWidget>
 #include <QScreen>
+#include <QLCDNumber>
 
 #include "ui_mainwindow.h"
 #include "about.h"
@@ -43,6 +44,9 @@ private:
 
 	QTranslator baseTranslator, helpTranslator, appTranslator;
 
+	QLCDNumber *lcd;
+	int screens, startscreen;
+
 	QByteArray logo;
 
 	QString open_text = tr("Import Logo Image");
@@ -50,11 +54,12 @@ private:
 	void importImage(QLabel*, QLabel*, int, int);
 	void exportImage(QLabel*);
 
-	quint32 logo_ofs[5];
-	quint32 logo_len[5];
+	quint32 logo_ofs[9];
+	quint32 logo_len[9];
 
 	void loadLogo(quint32, quint32, int);
 	void saveLogo(QFile&, int);
+
 	quint32 calcLogo(int);
 /*
 	struct LOGO_HEADER
@@ -75,13 +80,16 @@ private:
 
 	}logo_header;
 */
-
 private slots:
+
+	void centerOnScreen();
 
 	void on_actionExit_triggered();
 	bool on_actionOpen_triggered();
 	void on_actionSave_triggered();
 	void on_actionFlash_triggered();
+	void on_actionPrevLogo_triggered();
+	void on_actionNextLogo_triggered();
 	void on_actionAbout_triggered();
 	void on_actionHelp_triggered();
 
@@ -90,11 +98,19 @@ private slots:
 	void on_pushButton_3_imp_clicked();
 	void on_pushButton_4_imp_clicked();
 	void on_pushButton_5_imp_clicked();
+	void on_pushButton_6_imp_clicked();
+	void on_pushButton_7_imp_clicked();
+	void on_pushButton_8_imp_clicked();
+	void on_pushButton_9_imp_clicked();
 	void on_pushButton_1_exp_clicked();
 	void on_pushButton_2_exp_clicked();
 	void on_pushButton_3_exp_clicked();
 	void on_pushButton_4_exp_clicked();
 	void on_pushButton_5_exp_clicked();
+	void on_pushButton_6_exp_clicked();
+	void on_pushButton_7_exp_clicked();
+	void on_pushButton_8_exp_clicked();
+	void on_pushButton_9_exp_clicked();
 
 	void keyPressEvent(QKeyEvent*);
 	void closeEvent(QCloseEvent*);

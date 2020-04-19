@@ -43,8 +43,25 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
 
 	setupUi(this);
 
-	widget->hide();
+	lcd = new QLCDNumber(1);
+	lcd->setToolTip(tr("Logo Screens"));
+	lcd->setStatusTip(tr("Logo Screens"));
 
+	toolBar->insertWidget(actionNextLogo, lcd);
+
+	logo_5->hide();
+	logo_6->hide();
+	logo_7->hide();
+	logo_8->hide();
+	logo_9->hide();
+
+	resize(0, 0);
+
+	QTimer::singleShot(1, this, SLOT(centerOnScreen()));
+}
+
+void MainWindow::centerOnScreen()
+{
 	move(screen()->geometry().center() - rect().center());
 }
 
@@ -58,8 +75,8 @@ quint32 MainWindow::calcLogo(int pos)
 void MainWindow::loadLogo(quint32 ofs, quint32 len, int index)
 {
 	QPixmap pm;
-	QLabel *img[5] = { label_1_img, label_2_img, label_3_img, label_4_img, label_5_img };
-	QLabel *txt[5] = { label_1_txt, label_2_txt, label_3_txt, label_4_txt, label_5_txt };
+	QLabel *img[9] = { label_1_img, label_2_img, label_3_img, label_4_img, label_5_img, label_6_img, label_7_img, label_8_img, label_9_img };
+	QLabel *txt[9] = { label_1_txt, label_2_txt, label_3_txt, label_4_txt, label_5_txt, label_6_txt, label_7_txt, label_8_txt, label_9_txt };
 
 	pm.loadFromData(logo.mid(ofs, len), "BMP");
 
@@ -71,7 +88,7 @@ void MainWindow::saveLogo(QFile &file, int index)
 {
 	QByteArray arr;
 	QBuffer buf(&arr);
-	QLabel *img[5] = { label_1_img, label_2_img, label_3_img, label_4_img, label_5_img };
+	QLabel *img[9] = { label_1_img, label_2_img, label_3_img, label_4_img, label_5_img, label_6_img, label_7_img, label_8_img, label_9_img };
 
 	buf.open(QIODevice::WriteOnly);
 
@@ -174,6 +191,21 @@ bool MainWindow::on_actionOpen_triggered()
 				bool mixed = true;
 				quint32 val1, val2;
 
+				startscreen = 0;
+
+				logo_9->hide();
+				logo_8->hide();
+				logo_7->hide();
+				logo_6->hide();
+				logo_5->hide();
+				logo_4->show();
+				logo_3->show();
+				logo_2->show();
+				logo_1->show();
+
+				actionPrevLogo->setEnabled(false);
+				actionNextLogo->setEnabled(false);
+
 				if(logo.mid(calcLogo(0x4008), 2).toHex() == "424d" && logo.mid(calcLogo(0x400C), 2).toHex() == "424d")
 				{
 					while(logo.mid(calcLogo(0x4008 + logos*4), 2).toHex() == "424d")
@@ -199,7 +231,7 @@ bool MainWindow::on_actionOpen_triggered()
 
 					if(val1 && val2)
 					{
-						if(index < 5)
+						if(index < 9)
 						{
 							logo_ofs[index] = val1;
 							logo_len[index] = val2;
@@ -212,11 +244,17 @@ bool MainWindow::on_actionOpen_triggered()
 				}
 				while((val1 && val2));
 
-				index > 4 ? widget->show() : widget->hide();
+				screens = index;
 
-				if(index > 5)
+				lcd->display(screens);
+
+				if(screens > 4)
 				{
-					QMessageBox::warning(this, APPNAME, tr("More than 5 logo screens found!\n\nThis is not supported yet..."));
+					actionNextLogo->setEnabled(true);
+				}
+				else if(screens > 9)
+				{
+					QMessageBox::warning(this, APPNAME, tr("More than 9 logo screens found!\n\nThis is not supported yet..."));
 
 					actionSave->setEnabled(false);
 
@@ -228,11 +266,19 @@ bool MainWindow::on_actionOpen_triggered()
 				pushButton_3_imp->setEnabled(true);
 				pushButton_4_imp->setEnabled(true);
 				pushButton_5_imp->setEnabled(true);
+				pushButton_6_imp->setEnabled(true);
+				pushButton_7_imp->setEnabled(true);
+				pushButton_8_imp->setEnabled(true);
+				pushButton_9_imp->setEnabled(true);
 				pushButton_1_exp->setEnabled(true);
 				pushButton_2_exp->setEnabled(true);
 				pushButton_3_exp->setEnabled(true);
 				pushButton_4_exp->setEnabled(true);
 				pushButton_5_exp->setEnabled(true);
+				pushButton_6_exp->setEnabled(true);
+				pushButton_7_exp->setEnabled(true);
+				pushButton_8_exp->setEnabled(true);
+				pushButton_9_exp->setEnabled(true);
 
 				actionSave->setEnabled(true);
 
@@ -258,14 +304,9 @@ void MainWindow::on_actionSave_triggered()
 		{
 			file.write(logo.mid(0, logo_ofs[0]));
 
-			saveLogo(file, 0);
-			saveLogo(file, 1);
-			saveLogo(file, 2);
-			saveLogo(file, 3);
-
-			if(widget->isVisible())
+			for(int logo = 0; logo < screens; logo++)
 			{
-				saveLogo(file, 4);
+				saveLogo(file, logo);
 			}
 
 			file.close();
@@ -289,6 +330,52 @@ void MainWindow::on_actionFlash_triggered()
 		{
 			flashDialog(this).exec();
 		}
+	}
+}
+
+void MainWindow::on_actionPrevLogo_triggered()
+{
+	QWidget *logos[9] = { logo_1, logo_2, logo_3, logo_4, logo_5, logo_6, logo_7, logo_8, logo_9 };
+
+	if(startscreen > 0)
+	{
+		startscreen--;
+
+		logos[startscreen + 4]->hide();
+		logos[startscreen]->show();
+	}
+
+	if(startscreen == 0)
+	{
+		actionPrevLogo->setEnabled(false);
+	}
+
+	if(!actionNextLogo->isEnabled())
+	{
+		actionNextLogo->setEnabled(true);
+	}
+}
+
+void MainWindow::on_actionNextLogo_triggered()
+{
+	QWidget *logos[9] = { logo_1, logo_2, logo_3, logo_4, logo_5, logo_6, logo_7, logo_8, logo_9 };
+
+	if(startscreen < screens - 4)
+	{
+		logos[startscreen]->hide();
+		logos[startscreen + 4]->show();
+
+		startscreen++;
+	}
+
+	if(startscreen == screens - 4)
+	{
+		actionNextLogo->setEnabled(false);
+	}
+
+	if(!actionPrevLogo->isEnabled())
+	{
+		actionPrevLogo->setEnabled(true);
 	}
 }
 
@@ -327,6 +414,26 @@ void MainWindow::on_pushButton_5_imp_clicked()
 	importImage(label_5_img, label_5_txt, logo_ofs[4], logo_len[4]);
 }
 
+void MainWindow::on_pushButton_6_imp_clicked()
+{
+	importImage(label_6_img, label_6_txt, logo_ofs[5], logo_len[5]);
+}
+
+void MainWindow::on_pushButton_7_imp_clicked()
+{
+	importImage(label_7_img, label_7_txt, logo_ofs[6], logo_len[6]);
+}
+
+void MainWindow::on_pushButton_8_imp_clicked()
+{
+	importImage(label_8_img, label_8_txt, logo_ofs[7], logo_len[7]);
+}
+
+void MainWindow::on_pushButton_9_imp_clicked()
+{
+	importImage(label_9_img, label_9_txt, logo_ofs[8], logo_len[8]);
+}
+
 void MainWindow::on_pushButton_1_exp_clicked()
 {
 	exportImage(label_1_img);
@@ -350,6 +457,26 @@ void MainWindow::on_pushButton_4_exp_clicked()
 void MainWindow::on_pushButton_5_exp_clicked()
 {
 	exportImage(label_5_img);
+}
+
+void MainWindow::on_pushButton_6_exp_clicked()
+{
+	exportImage(label_6_img);
+}
+
+void MainWindow::on_pushButton_7_exp_clicked()
+{
+	exportImage(label_7_img);
+}
+
+void MainWindow::on_pushButton_8_exp_clicked()
+{
+	exportImage(label_8_img);
+}
+
+void MainWindow::on_pushButton_9_exp_clicked()
+{
+	exportImage(label_9_img);
 }
 
 void MainWindow::keyPressEvent(QKeyEvent *ke)

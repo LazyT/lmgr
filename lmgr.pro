@@ -68,10 +68,12 @@ libraries.files = $$[QT_INSTALL_LIBEXECS]/Qt5Core.dll $$[QT_INSTALL_LIBEXECS]/Qt
 
 plugins1.path  = $$INSTALLDIR/platforms
 plugins1.files = $$[QT_INSTALL_PLUGINS]/platforms/qwindows.dll
-plugins2.path  = $$INSTALLDIR/imageformats
-plugins2.files = $$[QT_INSTALL_PLUGINS]/imageformats/qjpeg.dll
-plugins3.path  = $$INSTALLDIR/sqldrivers
-plugins3.files = $$[QT_INSTALL_PLUGINS]/sqldrivers/qsqlite.dll
+plugins2.path  = $$INSTALLDIR/styles
+plugins2.files = $$[QT_INSTALL_PLUGINS]/styles/qwindowsvistastyle.dll
+plugins3.path  = $$INSTALLDIR/imageformats
+plugins3.files = $$[QT_INSTALL_PLUGINS]/imageformats/qjpeg.dll
+plugins4.path  = $$INSTALLDIR/sqldrivers
+plugins4.files = $$[QT_INSTALL_PLUGINS]/sqldrivers/qsqlite.dll
 
 android.path  = $$INSTALLDIR
 android.files = $$(PLATFORMTOOLS)/adb.exe $$(PLATFORMTOOLS)/fastboot.exe $$(PLATFORMTOOLS)/AdbWinApi.dll $$(PLATFORMTOOLS)/AdbWinUsbApi.dll
@@ -81,7 +83,7 @@ win.extra = move $$INSTALLDIR\lmgr.exe $$INSTALLDIR\run.exe &&\
             7z a -mx9 $$(TMP)\lmgr.7z $$INSTALLDIR\* &&\
             copy /b ins\win\7zs2.sfx + $$(TMP)\lmgr.7z lmgr-"$$VERS".exe
 
-INSTALLS += target translations help libraries plugins1 plugins2 plugins3 android win
+INSTALLS += target translations help libraries plugins1 plugins2 plugins3 plugins4 android win
 }
 
 macx {

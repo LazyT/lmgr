@@ -16,7 +16,7 @@ private:
 
 	QProcess *process;
 	QString process_output;
-	QStringList devices = { "cepheus", "davinci", "dipper", "grus", "pyxis", "raphael", "raphaelin", "tucana" };
+	QStringList devices = { "beryllium", "cepheus", "davinci", "dipper", "grus", "pyxis", "raphael", "raphaelin", "tucana" };
 
 	bool running, failed, abort, supported;
 

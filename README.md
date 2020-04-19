@@ -27,7 +27,7 @@ The current version supports the following features:
 
 ## Download
 
-Download the latest version for your operating system. All 3 files (exe, dmg, AppImage) contain the binary, translations and required libraries to run lmgr on the target platform without installing anything.
+Download the latest version for your operating system. All 3 files (exe, dmg, AppImage) contain the binary, translation, help and required libraries to run lmgr on the target platform without installing anything.
 
 * [Windows (exe)](https://github.com/LazyT/lmgr/releases)
 

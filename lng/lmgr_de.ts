@@ -104,141 +104,175 @@
     </message>
     <message>
         <location filename="../res/ui/mainwindow.ui" line="28"/>
+        <location filename="../mainwindow.cpp" line="47"/>
+        <location filename="../mainwindow.cpp" line="48"/>
         <source>Logo Screens</source>
         <translation>Logo Bildschirme</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="36"/>
-        <location filename="../res/ui/mainwindow.ui" line="139"/>
-        <location filename="../res/ui/mainwindow.ui" line="242"/>
-        <location filename="../res/ui/mainwindow.ui" line="345"/>
-        <location filename="../res/ui/mainwindow.ui" line="461"/>
+        <location filename="../res/ui/mainwindow.ui" line="49"/>
+        <location filename="../res/ui/mainwindow.ui" line="166"/>
+        <location filename="../res/ui/mainwindow.ui" line="283"/>
+        <location filename="../res/ui/mainwindow.ui" line="400"/>
+        <location filename="../res/ui/mainwindow.ui" line="517"/>
+        <location filename="../res/ui/mainwindow.ui" line="634"/>
+        <location filename="../res/ui/mainwindow.ui" line="751"/>
+        <location filename="../res/ui/mainwindow.ui" line="868"/>
+        <location filename="../res/ui/mainwindow.ui" line="985"/>
         <source>Size, Offset, Length</source>
         <translation>Größe, Position, Länge</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="93"/>
-        <location filename="../res/ui/mainwindow.ui" line="196"/>
-        <location filename="../res/ui/mainwindow.ui" line="299"/>
-        <location filename="../res/ui/mainwindow.ui" line="402"/>
-        <location filename="../res/ui/mainwindow.ui" line="518"/>
+        <location filename="../res/ui/mainwindow.ui" line="106"/>
+        <location filename="../res/ui/mainwindow.ui" line="223"/>
+        <location filename="../res/ui/mainwindow.ui" line="340"/>
+        <location filename="../res/ui/mainwindow.ui" line="457"/>
+        <location filename="../res/ui/mainwindow.ui" line="574"/>
+        <location filename="../res/ui/mainwindow.ui" line="691"/>
+        <location filename="../res/ui/mainwindow.ui" line="808"/>
+        <location filename="../res/ui/mainwindow.ui" line="925"/>
+        <location filename="../res/ui/mainwindow.ui" line="1042"/>
         <source>Import</source>
         <translation>Importieren</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="116"/>
-        <location filename="../res/ui/mainwindow.ui" line="219"/>
-        <location filename="../res/ui/mainwindow.ui" line="322"/>
-        <location filename="../res/ui/mainwindow.ui" line="425"/>
-        <location filename="../res/ui/mainwindow.ui" line="541"/>
+        <location filename="../res/ui/mainwindow.ui" line="129"/>
+        <location filename="../res/ui/mainwindow.ui" line="246"/>
+        <location filename="../res/ui/mainwindow.ui" line="363"/>
+        <location filename="../res/ui/mainwindow.ui" line="480"/>
+        <location filename="../res/ui/mainwindow.ui" line="597"/>
+        <location filename="../res/ui/mainwindow.ui" line="714"/>
+        <location filename="../res/ui/mainwindow.ui" line="831"/>
+        <location filename="../res/ui/mainwindow.ui" line="948"/>
+        <location filename="../res/ui/mainwindow.ui" line="1065"/>
         <source>Export</source>
         <translation>Exportieren</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="576"/>
+        <location filename="../res/ui/mainwindow.ui" line="1100"/>
         <source>File</source>
         <translation>Datei</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="587"/>
+        <location filename="../res/ui/mainwindow.ui" line="1111"/>
         <source>Info</source>
         <translation>Info</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="631"/>
+        <location filename="../res/ui/mainwindow.ui" line="1158"/>
         <source>Open</source>
         <translation>Öffnen</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="634"/>
-        <location filename="../res/ui/mainwindow.ui" line="637"/>
+        <location filename="../res/ui/mainwindow.ui" line="1161"/>
+        <location filename="../res/ui/mainwindow.ui" line="1164"/>
         <source>Open Logo Image</source>
         <translation>Logo Image öffnen</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="649"/>
+        <location filename="../res/ui/mainwindow.ui" line="1176"/>
         <source>Save</source>
         <translation>Speichern</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="652"/>
-        <location filename="../res/ui/mainwindow.ui" line="655"/>
+        <location filename="../res/ui/mainwindow.ui" line="1179"/>
+        <location filename="../res/ui/mainwindow.ui" line="1182"/>
         <source>Save Logo Image</source>
         <translation>Logo Image speichern</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="664"/>
+        <location filename="../res/ui/mainwindow.ui" line="1191"/>
         <source>Exit</source>
         <translation>Ende</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="667"/>
-        <location filename="../res/ui/mainwindow.ui" line="670"/>
+        <location filename="../res/ui/mainwindow.ui" line="1194"/>
+        <location filename="../res/ui/mainwindow.ui" line="1197"/>
         <source>Exit Program</source>
         <translation>Programm beenden</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="679"/>
+        <location filename="../res/ui/mainwindow.ui" line="1206"/>
         <source>About</source>
         <translation>Über</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="682"/>
-        <location filename="../res/ui/mainwindow.ui" line="685"/>
+        <location filename="../res/ui/mainwindow.ui" line="1209"/>
+        <location filename="../res/ui/mainwindow.ui" line="1212"/>
         <source>About Program</source>
         <translation>Über das Programm</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="694"/>
+        <location filename="../res/ui/mainwindow.ui" line="1221"/>
         <source>Help</source>
         <translation>Hilfe</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="697"/>
-        <location filename="../res/ui/mainwindow.ui" line="700"/>
+        <location filename="../res/ui/mainwindow.ui" line="1224"/>
+        <location filename="../res/ui/mainwindow.ui" line="1227"/>
         <source>Show Help</source>
         <translation>Hilfe anzeigen</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="709"/>
+        <location filename="../res/ui/mainwindow.ui" line="1236"/>
         <source>Flash</source>
         <translation>Flashen</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="712"/>
-        <location filename="../res/ui/mainwindow.ui" line="715"/>
-        <location filename="../mainwindow.cpp" line="286"/>
+        <location filename="../res/ui/mainwindow.ui" line="1239"/>
+        <location filename="../res/ui/mainwindow.ui" line="1242"/>
+        <location filename="../mainwindow.cpp" line="327"/>
         <source>Flash Logo Image</source>
         <translation>Logo Image flashen</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="90"/>
-        <location filename="../res/ui/mainwindow.ui" line="193"/>
-        <location filename="../res/ui/mainwindow.ui" line="296"/>
-        <location filename="../res/ui/mainwindow.ui" line="399"/>
-        <location filename="../res/ui/mainwindow.ui" line="515"/>
-        <location filename="../mainwindow.cpp" line="88"/>
+        <location filename="../res/ui/mainwindow.ui" line="1257"/>
+        <location filename="../res/ui/mainwindow.ui" line="1260"/>
+        <source>Show Previous Logo</source>
+        <translation>Vorheriges Logo anzeigen</translation>
+    </message>
+    <message>
+        <location filename="../res/ui/mainwindow.ui" line="1275"/>
+        <location filename="../res/ui/mainwindow.ui" line="1278"/>
+        <source>Show Next Logo</source>
+        <translation>nächstes Logo anzeigen</translation>
+    </message>
+    <message>
+        <location filename="../res/ui/mainwindow.ui" line="103"/>
+        <location filename="../res/ui/mainwindow.ui" line="220"/>
+        <location filename="../res/ui/mainwindow.ui" line="337"/>
+        <location filename="../res/ui/mainwindow.ui" line="454"/>
+        <location filename="../res/ui/mainwindow.ui" line="571"/>
+        <location filename="../res/ui/mainwindow.ui" line="688"/>
+        <location filename="../res/ui/mainwindow.ui" line="805"/>
+        <location filename="../res/ui/mainwindow.ui" line="922"/>
+        <location filename="../res/ui/mainwindow.ui" line="1039"/>
+        <location filename="../mainwindow.cpp" line="105"/>
         <source>Import Logo Screen</source>
         <translation>Logo Bildschirm importieren</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="96"/>
+        <location filename="../mainwindow.cpp" line="113"/>
         <source>Selected logo screen will be scaled from %1x%2 to %3x%4!</source>
         <translation>Der ausgewählte Logo-Bildschirm wird von %1x%2 bis %3x%4 skaliert!</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="113"/>
-        <location filename="../res/ui/mainwindow.ui" line="216"/>
-        <location filename="../res/ui/mainwindow.ui" line="319"/>
-        <location filename="../res/ui/mainwindow.ui" line="422"/>
-        <location filename="../res/ui/mainwindow.ui" line="538"/>
-        <location filename="../mainwindow.cpp" line="108"/>
+        <location filename="../res/ui/mainwindow.ui" line="126"/>
+        <location filename="../res/ui/mainwindow.ui" line="243"/>
+        <location filename="../res/ui/mainwindow.ui" line="360"/>
+        <location filename="../res/ui/mainwindow.ui" line="477"/>
+        <location filename="../res/ui/mainwindow.ui" line="594"/>
+        <location filename="../res/ui/mainwindow.ui" line="711"/>
+        <location filename="../res/ui/mainwindow.ui" line="828"/>
+        <location filename="../res/ui/mainwindow.ui" line="945"/>
+        <location filename="../res/ui/mainwindow.ui" line="1062"/>
+        <location filename="../mainwindow.cpp" line="125"/>
         <source>Export Logo Screen</source>
         <translation>Logo Bildschirm exportieren</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="126"/>
-        <location filename="../mainwindow.cpp" line="141"/>
+        <location filename="../mainwindow.cpp" line="143"/>
+        <location filename="../mainwindow.cpp" line="158"/>
         <source>Logo screen export failed!
 
 %1</source>
@@ -247,19 +281,19 @@
 %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="130"/>
-        <location filename="../mainwindow.cpp" line="137"/>
+        <location filename="../mainwindow.cpp" line="147"/>
+        <location filename="../mainwindow.cpp" line="154"/>
         <source>Logo screen export successfull.</source>
         <translation>Logo Bildschirm erfolgreich exportiert.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="157"/>
-        <location filename="../mainwindow.h" line="48"/>
+        <location filename="../mainwindow.cpp" line="174"/>
+        <location filename="../mainwindow.h" line="52"/>
         <source>Import Logo Image</source>
         <translation>Logo Abbild importieren</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="168"/>
+        <location filename="../mainwindow.cpp" line="185"/>
         <source>Doesn&apos;t look like a supported logo image!
 
 No &quot;LOGO!!!!&quot; header @ 0x4000...</source>
@@ -268,16 +302,16 @@ No &quot;LOGO!!!!&quot; header @ 0x4000...</source>
 Kein &quot;LOGO!!!!!&quot; Header @ 0x4000...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="219"/>
-        <source>More than 5 logo screens found!
+        <location filename="../mainwindow.cpp" line="257"/>
+        <source>More than 9 logo screens found!
 
 This is not supported yet...</source>
-        <translation>Mehr als 5 Logo Bildschirme gefunden!
+        <translation>Mehr als 9 Logo Bildschirme gefunden!
 
 Dies wird noch nicht unterstützt...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="244"/>
+        <location filename="../mainwindow.cpp" line="290"/>
         <source>Could not open logo image!
 
 %1</source>
@@ -286,17 +320,17 @@ Dies wird noch nicht unterstützt...</translation>
 %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="253"/>
+        <location filename="../mainwindow.cpp" line="299"/>
         <source>Export Logo Image</source>
         <translation>Logo Abbild exportieren</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="273"/>
+        <location filename="../mainwindow.cpp" line="314"/>
         <source>Logo image saved successfully.</source>
         <translation>Logo Abbild erfolgreich gespeichert.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="277"/>
+        <location filename="../mainwindow.cpp" line="318"/>
         <source>Could not save logo image!
 
 %1</source>
@@ -305,7 +339,7 @@ Dies wird noch nicht unterstützt...</translation>
 %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="284"/>
+        <location filename="../mainwindow.cpp" line="325"/>
         <source>Flashing wrong logo image may brick your device!
 
 Really continue?</source>
@@ -314,7 +348,7 @@ Really continue?</source>
 Wirklich weitermachen?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="371"/>
+        <location filename="../mainwindow.cpp" line="498"/>
         <source>Really exit program?</source>
         <translation>Programm wirklich beenden?</translation>
     </message>
