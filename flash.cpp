@@ -32,7 +32,20 @@ void flashDialog::prg_readyReadStandardOutput()
 			response.append("\n");
 		}
 
-		plainTextEdit->appendPlainText(response.replace("\n\n", "\n"));
+		if(response.contains("error") || response.contains("FAILED") || response.contains("unauthorized") || response.contains("permissions"))
+		{
+			textcolor = textEdit->textColor();
+
+			textEdit->setTextColor(Qt::red);
+
+			textEdit->append(response.replace("\n\n", "\n"));
+
+			textEdit->setTextColor(textcolor);
+		}
+		else
+		{
+			textEdit->append(response.replace("\n\n", "\n"));
+		}
 	}
 }
 
@@ -43,7 +56,16 @@ void flashDialog::prg_finished(__attribute__((unused)) int exitCode, __attribute
 
 void flashDialog::sendCommand(QString cmd)
 {
-	plainTextEdit->appendPlainText(cmd);
+	textcolor = textEdit->textColor();
+	fontweight = textEdit->fontWeight();
+
+	textEdit->setTextColor(Qt::blue);
+	textEdit->setFontWeight(QFont::Bold);
+
+	textEdit->append(cmd);
+
+	textEdit->setTextColor(textcolor);
+	textEdit->setFontWeight(fontweight);
 
 	failed = false;
 	running = true;
@@ -133,7 +155,7 @@ void flashDialog::startFlashing()
 		{
 			sendCommand("adb reboot-bootloader");
 
-			plainTextEdit->appendPlainText("\nWaiting 5 seconds for device to finish reboot...\n");
+			textEdit->append("\nWaiting 5 seconds for device to finish reboot...\n");
 
 			QCoreApplication::processEvents();
 
