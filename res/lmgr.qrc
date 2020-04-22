@@ -12,6 +12,7 @@
         <file>png/prev.png</file>
         <file>png/next.png</file>
         <file>png/exit.png</file>
+        <file>png/update.png</file>
         <file>png/info.png</file>
         <file>png/help.png</file>
         <file>png/con-chk.png</file>
@@ -23,5 +24,8 @@
         <file>png/home-64.png</file>
         <file>png/gift-48.png</file>
         <file>png/gift-64.png</file>
+        <file>png/upd_win.png</file>
+        <file>png/upd_lin.png</file>
+        <file>png/upd_mac.png</file>
     </qresource>
 </RCC>

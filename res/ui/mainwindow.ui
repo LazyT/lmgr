@@ -1113,6 +1113,8 @@
     </property>
     <addaction name="actionAbout"/>
     <addaction name="actionHelp"/>
+    <addaction name="separator"/>
+    <addaction name="actionUpdate"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuHelp"/>
@@ -1147,6 +1149,8 @@
    <addaction name="separator"/>
    <addaction name="actionPrevLogo"/>
    <addaction name="actionNextLogo"/>
+   <addaction name="separator"/>
+   <addaction name="actionUpdate"/>
    <addaction name="separator"/>
    <addaction name="actionAbout"/>
    <addaction name="actionHelp"/>
@@ -1296,6 +1300,21 @@
    </property>
    <property name="statusTip">
     <string>Dump Logo Image</string>
+   </property>
+  </action>
+  <action name="actionUpdate">
+   <property name="icon">
+    <iconset resource="../lmgr.qrc">
+     <normaloff>:/png/png/update.png</normaloff>:/png/png/update.png</iconset>
+   </property>
+   <property name="text">
+    <string>Update</string>
+   </property>
+   <property name="toolTip">
+    <string>Online Update</string>
+   </property>
+   <property name="statusTip">
+    <string>Online Update</string>
    </property>
   </action>
  </widget>

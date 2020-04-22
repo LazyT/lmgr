@@ -96,6 +96,49 @@
     </message>
 </context>
 <context>
+    <name>Dialog_OnlineUpdate</name>
+    <message>
+        <location filename="../res/ui/onlineupd.ui" line="14"/>
+        <source>Online Update</source>
+        <translation>Online Aktualisierung</translation>
+    </message>
+    <message>
+        <location filename="../res/ui/onlineupd.ui" line="27"/>
+        <source>Version</source>
+        <translation>Version</translation>
+    </message>
+    <message>
+        <location filename="../res/ui/onlineupd.ui" line="55"/>
+        <source>Installed</source>
+        <translation>Installiert</translation>
+    </message>
+    <message>
+        <location filename="../res/ui/onlineupd.ui" line="86"/>
+        <source>Available</source>
+        <translation>Verfügbar</translation>
+    </message>
+    <message>
+        <location filename="../res/ui/onlineupd.ui" line="101"/>
+        <source>Changes</source>
+        <translation>Änderungen</translation>
+    </message>
+    <message>
+        <location filename="../res/ui/onlineupd.ui" line="107"/>
+        <source>Changelog compared to last Version</source>
+        <translation>Änderungsübersicht im Vergleich zur letzten Version</translation>
+    </message>
+    <message>
+        <location filename="../res/ui/onlineupd.ui" line="120"/>
+        <source>Download</source>
+        <translation>Herunterladen</translation>
+    </message>
+    <message>
+        <location filename="../res/ui/onlineupd.ui" line="126"/>
+        <source>Download Progress</source>
+        <translation>Fortschritt</translation>
+    </message>
+</context>
+<context>
     <name>MainWindow</name>
     <message>
         <location filename="../res/ui/mainwindow.ui" line="17"/>
@@ -159,95 +202,106 @@
         <translation>Info</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="1160"/>
+        <location filename="../res/ui/mainwindow.ui" line="1164"/>
         <source>Open</source>
         <translation>Öffnen</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="1163"/>
-        <location filename="../res/ui/mainwindow.ui" line="1166"/>
+        <location filename="../res/ui/mainwindow.ui" line="1167"/>
+        <location filename="../res/ui/mainwindow.ui" line="1170"/>
         <source>Open Logo Image</source>
         <translation>Logo Abbild öffnen</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="1178"/>
+        <location filename="../res/ui/mainwindow.ui" line="1182"/>
         <source>Save</source>
         <translation>Speichern</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="1181"/>
-        <location filename="../res/ui/mainwindow.ui" line="1184"/>
+        <location filename="../res/ui/mainwindow.ui" line="1185"/>
+        <location filename="../res/ui/mainwindow.ui" line="1188"/>
         <source>Save Logo Image</source>
         <translation>Logo Abbild speichern</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="1193"/>
+        <location filename="../res/ui/mainwindow.ui" line="1197"/>
         <source>Exit</source>
         <translation>Ende</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="1196"/>
-        <location filename="../res/ui/mainwindow.ui" line="1199"/>
+        <location filename="../res/ui/mainwindow.ui" line="1200"/>
+        <location filename="../res/ui/mainwindow.ui" line="1203"/>
         <source>Exit Program</source>
         <translation>Programm beenden</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="1208"/>
+        <location filename="../res/ui/mainwindow.ui" line="1212"/>
         <source>About</source>
         <translation>Über</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="1211"/>
-        <location filename="../res/ui/mainwindow.ui" line="1214"/>
+        <location filename="../res/ui/mainwindow.ui" line="1215"/>
+        <location filename="../res/ui/mainwindow.ui" line="1218"/>
         <source>About Program</source>
         <translation>Über das Programm</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="1223"/>
+        <location filename="../res/ui/mainwindow.ui" line="1227"/>
         <source>Help</source>
         <translation>Hilfe</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="1226"/>
-        <location filename="../res/ui/mainwindow.ui" line="1229"/>
+        <location filename="../res/ui/mainwindow.ui" line="1230"/>
+        <location filename="../res/ui/mainwindow.ui" line="1233"/>
         <source>Show Help</source>
         <translation>Hilfe anzeigen</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="1238"/>
+        <location filename="../res/ui/mainwindow.ui" line="1242"/>
         <source>Flash</source>
         <translation>Installieren</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="1241"/>
-        <location filename="../res/ui/mainwindow.ui" line="1244"/>
+        <location filename="../res/ui/mainwindow.ui" line="1245"/>
+        <location filename="../res/ui/mainwindow.ui" line="1248"/>
         <location filename="../mainwindow.cpp" line="338"/>
         <source>Flash Logo Image</source>
         <translation>Logo Abbild installieren</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="1259"/>
-        <location filename="../res/ui/mainwindow.ui" line="1262"/>
+        <location filename="../res/ui/mainwindow.ui" line="1263"/>
+        <location filename="../res/ui/mainwindow.ui" line="1266"/>
         <source>Show Previous Logo</source>
         <translation>Vorheriges Logo anzeigen</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="1277"/>
-        <location filename="../res/ui/mainwindow.ui" line="1280"/>
+        <location filename="../res/ui/mainwindow.ui" line="1281"/>
+        <location filename="../res/ui/mainwindow.ui" line="1284"/>
         <source>Show Next Logo</source>
         <translation>Nächstes Logo anzeigen</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="1289"/>
-        <location filename="../res/ui/mainwindow.ui" line="1292"/>
+        <location filename="../res/ui/mainwindow.ui" line="1293"/>
+        <location filename="../res/ui/mainwindow.ui" line="1296"/>
         <source>Dump</source>
         <translation>Auslesen</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="1295"/>
-        <location filename="../res/ui/mainwindow.ui" line="1298"/>
+        <location filename="../res/ui/mainwindow.ui" line="1299"/>
+        <location filename="../res/ui/mainwindow.ui" line="1302"/>
         <source>Dump Logo Image</source>
         <translation>Logo Abbild auslesen</translation>
+    </message>
+    <message>
+        <location filename="../res/ui/mainwindow.ui" line="1311"/>
+        <source>Update</source>
+        <translation>Aktualisierung</translation>
+    </message>
+    <message>
+        <location filename="../res/ui/mainwindow.ui" line="1314"/>
+        <location filename="../res/ui/mainwindow.ui" line="1317"/>
+        <source>Online Update</source>
+        <translation>Online Aktualisierung</translation>
     </message>
     <message>
         <location filename="../res/ui/mainwindow.ui" line="103"/>
@@ -300,7 +354,7 @@
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="177"/>
-        <location filename="../mainwindow.h" line="54"/>
+        <location filename="../mainwindow.h" line="64"/>
         <source>Import Logo Image</source>
         <translation>Logo Abbild importieren</translation>
     </message>
@@ -369,7 +423,7 @@ Really continue?</source>
 Wirklich weitermachen?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="509"/>
+        <location filename="../mainwindow.cpp" line="514"/>
         <source>Really exit program?</source>
         <translation>Programm wirklich beenden?</translation>
     </message>
@@ -521,6 +575,75 @@ Siehe Protokoll für Details...</translation>
         <location filename="../flash.cpp" line="274"/>
         <source>Really abort running command?</source>
         <translation>Laufenden Befehl wirklich abbrechen?</translation>
+    </message>
+</context>
+<context>
+    <name>onlineUpdDialog</name>
+    <message>
+        <location filename="../onlineupd.cpp" line="14"/>
+        <source>Ignore</source>
+        <translation>Ignorieren</translation>
+    </message>
+    <message>
+        <location filename="../onlineupd.cpp" line="15"/>
+        <source>Update</source>
+        <translation>Aktualisieren</translation>
+    </message>
+    <message>
+        <location filename="../onlineupd.cpp" line="106"/>
+        <source>No new version found.</source>
+        <translation>Keine neue Version gefunden.</translation>
+    </message>
+    <message>
+        <location filename="../onlineupd.cpp" line="116"/>
+        <source>Online update check failed!
+
+%1</source>
+        <translation>Aktualisierungsprüfung fehlgeschlagen!
+
+%1</translation>
+    </message>
+    <message>
+        <location filename="../onlineupd.cpp" line="136"/>
+        <source>Download from Github failed!
+
+%1</source>
+        <translation>Herunterladen von Github fehlgeschlagen!
+
+%1</translation>
+    </message>
+    <message>
+        <location filename="../onlineupd.cpp" line="152"/>
+        <source>Download successfully saved to %1.
+
+Run new version now?</source>
+        <translation>Download erfolgreich gespeichert unter %1.
+
+Jetzt die neue Version ausführen?</translation>
+    </message>
+    <message>
+        <location filename="../onlineupd.cpp" line="166"/>
+        <source>Could not run new version!</source>
+        <translation>Neue Version konnte nicht ausgeführt werden!</translation>
+    </message>
+    <message>
+        <location filename="../onlineupd.cpp" line="172"/>
+        <source>Could not save download to %1!
+
+%2</source>
+        <translation>Download konnte nicht unter %1 gespeichert werden!
+
+%2</translation>
+    </message>
+    <message>
+        <location filename="../onlineupd.cpp" line="183"/>
+        <source>Really abort download?</source>
+        <translation>Herunterladen wirklich abbrechen?</translation>
+    </message>
+    <message>
+        <location filename="../onlineupd.cpp" line="217"/>
+        <source>Cancel</source>
+        <translation>Abbrechen</translation>
     </message>
 </context>
 </TS>

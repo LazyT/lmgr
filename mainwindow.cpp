@@ -400,6 +400,11 @@ void MainWindow::on_actionHelp_triggered()
 	helpDialog(this).exec();
 }
 
+void MainWindow::on_actionUpdate_triggered()
+{
+	new onlineUpdDialog(this, false);
+}
+
 void MainWindow::on_pushButton_1_imp_clicked()
 {
 	importImage(label_1_img, label_1_txt, logo_ofs[0], logo_len[0]);
@@ -506,7 +511,7 @@ void MainWindow::keyPressEvent(QKeyEvent *ke)
 
 void MainWindow::closeEvent(QCloseEvent *ce)
 {
-	if(QMessageBox::question(this, APPNAME, tr("Really exit program?"), QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes) == QMessageBox::Yes)
+	if(forceclose || QMessageBox::question(this, APPNAME, tr("Really exit program?"), QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes) == QMessageBox::Yes)
 	{
 		ce->accept();
 	}

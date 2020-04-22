@@ -24,11 +24,19 @@
 #include <QHelpContentWidget>
 #include <QScreen>
 #include <QLCDNumber>
+#include <QNetworkAccessManager>
+#include <QNetworkRequest>
+#include <QNetworkReply>
+#include <QElapsedTimer>
+#include <QJsonArray>
+#include <QJsonDocument>
+#include <QJsonObject>
 
 #include "ui_mainwindow.h"
 #include "about.h"
 #include "flash.h"
 #include "help.h"
+#include "onlineupd.h"
 
 enum { FLASH, DUMP };
 
@@ -39,6 +47,8 @@ class MainWindow : public QMainWindow, private Ui::MainWindow
 public:
 
 	explicit MainWindow(QWidget *parent = nullptr);
+
+	bool forceclose = false;
 
 	QString flash_file;
 
@@ -95,6 +105,7 @@ private slots:
 	void on_actionNextLogo_triggered();
 	void on_actionAbout_triggered();
 	void on_actionHelp_triggered();
+	void on_actionUpdate_triggered();
 
 	void on_pushButton_1_imp_clicked();
 	void on_pushButton_2_imp_clicked();

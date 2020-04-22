@@ -1,11 +1,11 @@
-QT          += core gui widgets help
+QT          += core gui widgets network help
 
 TARGET      = lmgr
 
-SOURCES     += mainwindow.cpp about.cpp flash.cpp help.cpp
-HEADERS     += mainwindow.h   about.h   flash.h   help.h    helpbrowser.h
+SOURCES     += mainwindow.cpp about.cpp flash.cpp help.cpp onlineupd.cpp
+HEADERS     += mainwindow.h   about.h   flash.h   help.h   onlineupd.h helpbrowser.h
 
-FORMS       += res/ui/mainwindow.ui res/ui/about.ui res/ui/flash.ui res/ui/help.ui
+FORMS       += res/ui/mainwindow.ui res/ui/about.ui res/ui/flash.ui res/ui/help.ui res/ui/onlineupd.ui
 RESOURCES   += res/lmgr.qrc
 
 TRANSLATIONS+= lng/lmgr_de.ts
@@ -64,7 +64,7 @@ help.path  = $$INSTALLDIR/hlp
 help.files = hlp/dst/*.qch hlp/dst/*.qhc
 
 libraries.path  = $$INSTALLDIR
-libraries.files = $$[QT_INSTALL_LIBEXECS]/Qt5Core.dll $$[QT_INSTALL_LIBEXECS]/Qt5Gui.dll $$[QT_INSTALL_LIBEXECS]/Qt5Help.dll $$[QT_INSTALL_LIBEXECS]/Qt5Sql.dll $$[QT_INSTALL_LIBEXECS]/Qt5Widgets.dll $$[QT_INSTALL_LIBEXECS]/libgcc_s_seh-1.dll $$[QT_INSTALL_LIBEXECS]/libstdc++-6.dll $$[QT_INSTALL_LIBEXECS]/libwinpthread-1.dll
+libraries.files = $$[QT_INSTALL_LIBEXECS]/Qt5Core.dll $$[QT_INSTALL_LIBEXECS]/Qt5Gui.dll $$[QT_INSTALL_LIBEXECS]/Qt5Network.dll $$[QT_INSTALL_LIBEXECS]/Qt5Help.dll $$[QT_INSTALL_LIBEXECS]/Qt5Sql.dll $$[QT_INSTALL_LIBEXECS]/Qt5Widgets.dll $$[QT_INSTALL_LIBEXECS]/libgcc_s_seh-1.dll $$[QT_INSTALL_LIBEXECS]/libstdc++-6.dll $$[QT_INSTALL_LIBEXECS]/libwinpthread-1.dll $$[QT_INSTALL_PREFIX]/../../Tools/OpenSSL/Win_x64/bin/libcrypto-1_1-x64.dll $$[QT_INSTALL_PREFIX]/../../Tools/OpenSSL/Win_x64/bin/libssl-1_1-x64.dll
 
 plugins1.path  = $$INSTALLDIR/platforms
 plugins1.files = $$[QT_INSTALL_PLUGINS]/platforms/qwindows.dll
