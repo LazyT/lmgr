@@ -10,7 +10,7 @@ class flashDialog : public QDialog, private Ui::Dialog_Flash
 
 public:
 
-	flashDialog(QWidget*);
+	flashDialog(QWidget*, bool);
 
 private:
 
@@ -20,12 +20,14 @@ private:
 	QColor textcolor;
 	int fontweight;
 
-	bool running, failed, abort, supported;
+	bool usbmode, running, failed, abort, supported;
 
 private slots:
 
+	void initADB();
 	void sendCommand(QString);
 	void startFlashing();
+	void startDumping();
 
 	void prg_errorOccurred(QProcess::ProcessError);
 	void prg_readyReadStandardOutput();

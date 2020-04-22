@@ -15,7 +15,7 @@ Bitte lest erst aufmerksam die folgenden Informationen durch um eine Fehlbedienu
 
 <h2 id="1"><img src="img/info.png"> <u><i>1. Allgemeines</i></u></h2>
 
-Logo Manager ist ein einfach zu bedienendes Tool um die Startbildschirme (logo.img) bestimmter Xiaomi Smartphones anzuzeigen, anzupassen und zu installieren.
+Logo Manager ist ein einfach zu bedienendes Tool um die Startbildschirme (logo.img) bestimmter Xiaomi Smartphones anzuzeigen, anzupassen, auszulesen und zu installieren.
 <p>
 Es basiert auf Qt und ist somit auf verschiedenen Betriebssystemen wie Windows, Linux und MacOS einsetzbar. Alle erforderlichen Dateien sind enthalten, sodass keine Installation erforderlich ist.
 
@@ -30,6 +30,8 @@ Es werden nun die enthaltenen Logos angezeigt. Über jedem Logo stehen zusätzli
 Als Basis muss immer eine originale Datei für das Ziel-Gerät verwendet werden!
 <p>
 Diese bekommt man z.B. aus der Firmware-Datei von https://xiaomifirmwareupdater.com/firmware für das gewünschte Gerät.
+<p>
+Alternativ kann mit Root-Rechten das Logo-Abbild auch direkt aus dem Gerät ausgelesen werden.
 
 <h3 id="3.1"><img src="img/import.png"> <u><i>3.1 Importieren</i></u></h3>
 
@@ -43,7 +45,17 @@ Nachdem alles angepasst wurde kann das neue Image über "Speichern" erzeugt werd
 <p>
 Weiterhin können die Rohdaten als RAW gespeichert werden.
 
-<h2 id="4"><img src="img/flash.png"> <u><i>4. Installieren von Logos</i></u></h2>
+<h2 id="4"><img src="img/dump.png"> <u><i>4. Auslesen von Logos</i></u></h2>
+
+Mit Root-Rechten kann das Logo-Abbild direkt vom Gerät ausgelesen werden.
+<p>
+Dazu muss Android-Debugging in den Entwickleroptionen aktiviert sein.
+<p>
+Sind diese Vorraussetzungen erfüllt kann das Gerät per USB-Kabel mit dem PC verbunden werden.
+<p>
+Nun kann über "Auslesen" das Abbild ausgelesen und unter Downloads gespeichert werden.
+
+<h2 id="5"><img src="img/flash.png"> <u><i>5. Installieren von Logos</i></u></h2>
 
 Logos können auch direkt auf das Gerät installiert werden. <font color="red"><b>Dies geschieht ausdrücklich auf eigene Gefahr und kann das Gerät beschädigen!</b></font>
 <p>
@@ -51,13 +63,13 @@ Dazu muss der Bootloader entsperrt und Android-Debugging in den Entwickleroption
 <p>
 Sind diese Vorraussetzungen erfüllt kann das Gerät per USB-Kabel mit dem PC verbunden werden.
 <p>
-Nun wird über "Flashen" das gewünschte Image ausgewählt. Danach öffnet sich der Installationsdialog und es wird versucht das verbundene Gerät zu erkennen.
+Nun wird über "Installieren" das gewünschte Image ausgewählt. Danach öffnet sich der Installationsdialog und es wird versucht das verbundene Gerät zu erkennen.
 <p>
 War dies erfolgreich wird das Gerät im Fastboot-Modus neu gestartet. Dies dauert ca. 5-10 Sekunden, also Geduld!
 <p>
 Anschließend wird das Image in die Logo-Partition installiert und das Gerät wieder ins System gestartet. Das neue Logo sollte dabei nun angezeigt werden.
 
-<h3 id="4.1"><img src="img/error.png"> <u><i>4.1 Probleme</i></u></h3>
+<h2 id="6"><img src="img/error.png"> <u><i>6. Probleme</i></u></h2>
 <p>
 <b>Problem :</b> es wird kein Gerät erkannt<br>
 <b>Lösung :</b> unter Windows kann es erforderlich sein die benötigten Treiber für adb/fastboot zu installieren
@@ -67,6 +79,9 @@ Anschließend wird das Image in die Logo-Partition installiert und das Gerät wi
 <p>
 <b>Problem :</b> es erscheint "no permissions"<br>
 <b>Lösung :</b> auf dem Gerät den USB-Modus von Aufladen auf Übertragen ändern
+<p>
+<b>Problem :</b> es erscheint "permission denied"<br>
+<b>Lösung :</b> auf dem Gerät Root-Rechte gewähren
 
 </body>
 </html>

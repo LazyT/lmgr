@@ -30,6 +30,8 @@
 #include "flash.h"
 #include "help.h"
 
+enum { FLASH, DUMP };
+
 class MainWindow : public QMainWindow, private Ui::MainWindow
 {
 	Q_OBJECT
@@ -87,6 +89,7 @@ private slots:
 	void on_actionExit_triggered();
 	bool on_actionOpen_triggered();
 	void on_actionSave_triggered();
+	void on_actionDump_triggered();
 	void on_actionFlash_triggered();
 	void on_actionPrevLogo_triggered();
 	void on_actionNextLogo_triggered();

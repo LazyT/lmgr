@@ -1102,6 +1102,7 @@
     <addaction name="actionOpen"/>
     <addaction name="actionSave"/>
     <addaction name="separator"/>
+    <addaction name="actionDump"/>
     <addaction name="actionFlash"/>
     <addaction name="separator"/>
     <addaction name="actionExit"/>
@@ -1141,6 +1142,7 @@
    <addaction name="actionOpen"/>
    <addaction name="actionSave"/>
    <addaction name="separator"/>
+   <addaction name="actionDump"/>
    <addaction name="actionFlash"/>
    <addaction name="separator"/>
    <addaction name="actionPrevLogo"/>
@@ -1276,6 +1278,24 @@
    </property>
    <property name="statusTip">
     <string>Show Next Logo</string>
+   </property>
+  </action>
+  <action name="actionDump">
+   <property name="icon">
+    <iconset resource="../lmgr.qrc">
+     <normaloff>:/png/png/dump.png</normaloff>:/png/png/dump.png</iconset>
+   </property>
+   <property name="text">
+    <string>Dump</string>
+   </property>
+   <property name="iconText">
+    <string>Dump</string>
+   </property>
+   <property name="toolTip">
+    <string>Dump Logo Image</string>
+   </property>
+   <property name="statusTip">
+    <string>Dump Logo Image</string>
    </property>
   </action>
  </widget>

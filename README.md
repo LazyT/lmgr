@@ -9,7 +9,7 @@
 
 ## Description
 
-Logo Manager is an easy-to-use tool for displaying, customizing and installing the splash screens (logo.img) of certain Xiaomi smartphones.
+Logo Manager is an easy-to-use tool for viewing, editing, dumping and flashing splash screens (logo.img) of certain Xiaomi smartphones.
 
 It is based on Qt and can therefore be used on various operating systems such as Windows, Linux and MacOS.
 
@@ -17,7 +17,7 @@ All necessary files are included, so no installation is required.
 
 The current version supports the following features:
 
-* view, edit and flash logo images
+* view, edit, dump (root) and flash (unlocked bootloader) logo images
 * multi language (English and German)
 * cross platform (same look & feel on Windows, Linux, MacOS)
 

@@ -3,7 +3,7 @@
     <namespace>de.lazyt.lmgr</namespace>
     <virtualFolder>help</virtualFolder>
     <filterSection>
-        <toc>
+	<toc>
 	    <section title="Help" ref="en.html">
 	    <section title="General" ref="en.html#1"/>
 	    <section title="View" ref="en.html#2"/>
@@ -11,16 +11,16 @@
 		<section title="Import" ref="en.html#3.1"/>
 		<section title="Export" ref="en.html#3.2"/>
 	    </section>
-	    <section title="Install" ref="en.html#4">
-		<section title="Problems" ref="en.html#4.1"/>
-	    </section>
+	    <section title="Dump" ref="en.html#4"/>
+	    <section title="Flash" ref="en.html#5"/>
+	    <section title="Problems" ref="en.html#6"/>
 	</section>
 	</toc>
     </filterSection>
     <filterSection>
-        <files>
-            <file>img/*.png</file>
-            <file>en.html</file>
-        </files>
+	<files>
+	    <file>img/*.png</file>
+	    <file>en.html</file>
+	</files>
     </filterSection>
 </QtHelpProject>

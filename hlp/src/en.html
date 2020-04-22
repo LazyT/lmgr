@@ -13,7 +13,7 @@ Welcome to the Logo Manager. Please first read the following information careful
 
 <h2 id="1"><img src="img/info.png"> <u><i>1. General Information</i></u></h2>
 
-Logo Manager is an easy-to-use tool for displaying, customizing and installing the splash screens (logo.img) of certain Xiaomi smartphones.
+Logo Manager is an easy-to-use tool for viewing, editing, dumping and flashing the splash screens (logo.img) of certain Xiaomi smartphones.
 <p>
 It is based on Qt and can therefore be used on various operating systems such as Windows, Linux and MacOS. All necessary files are included, so no installation is required.
 	
@@ -28,6 +28,8 @@ Now the contained logos are displayed. Above each logo you can see additional de
 An original file for the target device must always be used as a basis!
 <p>
 You can get this e.g. from the firmware file from https://xiaomifirmwareupdater.com/firmware for the desired device.
+<p>
+Alternatively the logo image can also be read directly from the device with root rights.
 
 <h3 id="3.1"><img src="img/import.png"> <u><i>3.1 Import</i></u></h3>
 
@@ -41,7 +43,17 @@ Via "Export" the respective logo can be extracted. The formats BMP, JPG and PNG 
 <p>
 The rawdata can also be saved as RAW.
 
-<h2 id="4"><img src="img/flash.png"> <u><i>4. Install logos</i></u></h2>
+<h2 id="4"><img src="img/dump.png"> <u><i>4. Dump logos</i></u></h2>
+
+With root rights the logo image can be read directly from the device.
+<p>
+For this Android debugging must be enabled in the developer options.
+<p>
+If these requirements are met the device can be connected to the PC via USB cable.
+<p>
+Now the image can be dumped via "Dump" and will be saved under Downloads.
+
+<h2 id="5"><img src="img/flash.png"> <u><i>5. Flash logos</i></u></h2>
 
 Logos can also be installed directly on the device. <font color="red"><b>This is done explicitly at your own risk and can damage your device!</b></font>
 <p>
@@ -55,7 +67,7 @@ If this was successful, the device will be restarted in fastboot mode. This take
 <p>
 Then the image is installed in the logo partition and the device is rebooted into the system. The new logo should now be displayed.
 
-<h3 id="4.1"><img src="img/error.png"> <u><i>4.1 Problems</i></u></h3>
+<h2 id="6"><img src="img/error.png"> <u><i>6. Problems</i></u></h2>
 <p>
 <b>Problem :</b> no device detected<br>
 <b>Solution :</b> for Windows it may be necessary to install the required drivers for adb/fastboot
@@ -65,6 +77,9 @@ Then the image is installed in the logo partition and the device is rebooted int
 <p>
 <b>Problem :</b> "no permissions" appears<br>
 <b>Solution :</b> change the USB mode on the device from charging to transferring
+<p>
+<b>Problem :</b> "permission denied" appears<br>
+<b>Solution :</b> grant root privileges on the device
 
 </body>
 </html>

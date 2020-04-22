@@ -5,22 +5,22 @@
     <filterSection>
 	<toc>
 	    <section title="Hilfe" ref="de.html">
-	        <section title="Allgemeines" ref="de.html#1"/>
-	        <section title="Anzeigen" ref="de.html#2"/>
-	        <section title="Anpassen" ref="de.html#3">
+		<section title="Allgemeines" ref="de.html#1"/>
+		<section title="Anzeigen" ref="de.html#2"/>
+		<section title="Anpassen" ref="de.html#3">
 		    <section title="Importieren" ref="de.html#3.1"/>
 		    <section title="Exortieren" ref="de.html#3.2"/>
 		</section>
-		<section title="Installieren" ref="de.html#4">
-		    <section title="Probleme" ref="de.html#4.1"/>
-		</section>
+		<section title="Auslesen" ref="de.html#4"/>
+		<section title="Installieren" ref="de.html#5"/>
+		<section title="Probleme" ref="de.html#6"/>
 	    </section>
 	</toc>
     </filterSection>
     <filterSection>
-        <files>
-            <file>img/*.png</file>
-            <file>de.html</file>
-        </files>
+	<files>
+	    <file>img/*.png</file>
+	    <file>de.html</file>
+	</files>
     </filterSection>
 </QtHelpProject>

@@ -1,12 +1,24 @@
 ﻿#include "flash.h"
 
-flashDialog::flashDialog(QWidget *parent) : QDialog(parent)
+flashDialog::flashDialog(QWidget *parent, bool mode) : QDialog(parent)
 {
 	setupUi(this);
 
 	setWindowFlags(Qt::Window | Qt::WindowMaximizeButtonHint | Qt::WindowCloseButtonHint);
 
-	QTimer::singleShot(250, this, SLOT(startFlashing()));
+	buttonBox->button(QDialogButtonBox::Retry)->setEnabled(false);
+
+	if(mode == DUMP)
+	{
+		setWindowTitle(tr("Dump Logo Image"));
+
+		label_4->setDisabled(true);
+		label_fbt->setDisabled(true);
+	}
+
+	usbmode = mode;
+
+	QTimer::singleShot(250, this, SLOT(initADB()));
 }
 
 void flashDialog::prg_errorOccurred(__attribute__((unused)) QProcess::ProcessError error)
@@ -32,7 +44,7 @@ void flashDialog::prg_readyReadStandardOutput()
 			response.append("\n");
 		}
 
-		if(response.contains("error") || response.contains("FAILED") || response.contains("unauthorized") || response.contains("permissions"))
+		if(response.contains("error") || response.contains("FAILED") || response.contains("unauthorized") || response.contains("permissions") || response.contains("denied"))
 		{
 			textcolor = textEdit->textColor();
 
@@ -78,7 +90,7 @@ void flashDialog::sendCommand(QString cmd)
 	}
 }
 
-void flashDialog::startFlashing()
+void flashDialog::initADB()
 {
 	process = new QProcess(this);
 
@@ -87,8 +99,6 @@ void flashDialog::startFlashing()
 	connect(process, SIGNAL(errorOccurred(QProcess::ProcessError)), this, SLOT(prg_errorOccurred(QProcess::ProcessError)));
 	connect(process, SIGNAL(readyReadStandardOutput()), this, SLOT(prg_readyReadStandardOutput()));
 	connect(process, SIGNAL(finished(int, QProcess::ExitStatus)), this, SLOT(prg_finished(int, QProcess::ExitStatus)));
-
-	buttonBox->button(QDialogButtonBox::Retry)->setEnabled(false);
 
 	sendCommand("adb devices");
 
@@ -122,6 +132,8 @@ void flashDialog::startFlashing()
 	}
 	else if(process_output.contains("List of devices attached\n"))
 	{
+		buttonBox->button(QDialogButtonBox::Retry)->setEnabled(false);
+
 		label_serial->setText(process_output.split("\n").at(1).split("\t").at(0));
 
 		label_adb->setPixmap(QPixmap(":/png/png/con-suc.png"));
@@ -151,49 +163,90 @@ void flashDialog::startFlashing()
 			QMessageBox::warning(this, APPNAME, tr("Unsupported device detected!\n\nUse at your own risk and report model if succesfully..."));
 		}
 
-		if(QMessageBox::question(this, APPNAME, tr("Start fastboot to flash logo image?")) == QMessageBox::Yes)
+		if(usbmode == FLASH)
 		{
-			sendCommand("adb reboot-bootloader");
+			startFlashing();
+		}
+		else
+		{
+			startDumping();
+		}
+	}
+	else if(!failed)
+	{
+		QMessageBox::warning(this, APPNAME, tr("Unexpected response from device!"));
+	}
+}
 
-			textEdit->append("\nWaiting 5 seconds for device to finish reboot...\n");
+void flashDialog::startFlashing()
+{
+	if(QMessageBox::question(this, APPNAME, tr("Start fastboot to flash logo image?")) == QMessageBox::Yes)
+	{
+		sendCommand("adb reboot-bootloader");
 
-			QCoreApplication::processEvents();
+		textEdit->append("\nWaiting 5 seconds for device to finish reboot...\n");
 
-			QThread::msleep(5000);
+		QCoreApplication::processEvents();
 
-			label_fbt->setPixmap(QPixmap(":/png/png/con-err.png"));
+		QThread::msleep(5000);
 
-			abort = false;
+		label_fbt->setPixmap(QPixmap(":/png/png/con-err.png"));
 
-			do
+		abort = false;
+
+		do
+		{
+			QThread::msleep(1000);
+
+			sendCommand("fastboot devices");
+		}
+		while(!abort && (process_output.isEmpty() || !process_output.contains("\tfastboot\n")));
+
+		if(abort)
+		{
+			QMessageBox::warning(this, APPNAME, tr("Waiting for fastboot aborted!"));
+		}
+		else
+		{
+			label_fbt->setPixmap(QPixmap(":/png/png/con-suc.png"));
+
+			sendCommand("fastboot flash logo " + reinterpret_cast<MainWindow*>(parent())->flash_file);
+
+			if(process_output.contains("error") || process_output.contains("FAILED"))
 			{
-				QThread::msleep(1000);
-
-				sendCommand("fastboot devices");
-			}
-			while(!abort && (process_output.isEmpty() || !process_output.contains("\tfastboot\n")));
-
-			if(abort)
-			{
-				QMessageBox::warning(this, APPNAME, tr("Waiting for fastboot aborted!"));
+				QMessageBox::warning(this, APPNAME, tr("Flashing logo image failed!\n\nSee log for details..."));
 			}
 			else
 			{
-				label_fbt->setPixmap(QPixmap(":/png/png/con-suc.png"));
-
-				sendCommand("fastboot flash logo " + reinterpret_cast<MainWindow*>(parent())->flash_file);
-
-				if(process_output.contains("error") || process_output.contains("FAILED"))
-				{
-					QMessageBox::warning(this, APPNAME, tr("Flashing logo image failed!\n\nSee log for details..."));
-				}
-				else
-				{
-					QMessageBox::warning(this, APPNAME, tr("Flashing logo image finished.\n\nClick OK to reboot device..."));
-				}
-
-				sendCommand("fastboot reboot");
+				QMessageBox::information(this, APPNAME, tr("Flashing logo image finished.\n\nClick OK to reboot device..."));
 			}
+
+			sendCommand("fastboot reboot");
+		}
+	}
+}
+
+void flashDialog::startDumping()
+{
+	sendCommand("adb shell \"su -c dd if=/dev/block/bootdevice/by-name/logo of=/sdcard/logo.img\"");
+
+	if(process_output.contains("denied"))
+	{
+		buttonBox->button(QDialogButtonBox::Retry)->setEnabled(true);
+
+		QMessageBox::warning(this, APPNAME, tr("Access denied!\n\nGrant root permissions and try again..."));
+	}
+	else if(process_output.contains("copied"))
+	{
+		sendCommand("adb pull /sdcard/logo.img " + QStandardPaths::writableLocation(QStandardPaths::DownloadLocation) + "/logo.img");
+
+		if(process_output.contains("pulled"))
+		{
+			QMessageBox::information(this, APPNAME, tr("Dumping logo image finished."));
+		}
+		else
+		{
+			QMessageBox::warning(this, APPNAME, tr("Dumping logo image failed!\n\nSee log for details..."));
 		}
 	}
 	else if(!failed)
@@ -204,7 +257,14 @@ void flashDialog::startFlashing()
 
 void flashDialog::accept()
 {
-	startFlashing();
+	if(usbmode == FLASH)
+	{
+		initADB();
+	}
+	else
+	{
+		label_model->text() == "?" ? initADB() : startDumping();
+	}
 }
 
 void flashDialog::reject()

@@ -62,6 +62,9 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
 
 void MainWindow::centerOnScreen()
 {
+	lcd->setMinimumWidth(lcd->width() + 20);
+	lcd->setMaximumHeight(lcd->height() - 20);
+
 	move(screen()->geometry().center() - rect().center());
 }
 
@@ -320,6 +323,14 @@ void MainWindow::on_actionSave_triggered()
 	}
 }
 
+void MainWindow::on_actionDump_triggered()
+{
+	if(QMessageBox::question(this, APPNAME, tr("Dumping logo image needs root!\n\nReally continue?")) == QMessageBox::Yes)
+	{
+		flashDialog(this, DUMP).exec();
+	}
+}
+
 void MainWindow::on_actionFlash_triggered()
 {
 	if(QMessageBox::question(this, APPNAME, tr("Flashing wrong logo image may brick your device!\n\nReally continue?")) == QMessageBox::Yes)
@@ -328,7 +339,7 @@ void MainWindow::on_actionFlash_triggered()
 
 		if(on_actionOpen_triggered())
 		{
-			flashDialog(this).exec();
+			flashDialog(this, FLASH).exec();
 		}
 	}
 }

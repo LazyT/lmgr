@@ -54,7 +54,7 @@
     <message>
         <location filename="../res/ui/flash.ui" line="14"/>
         <source>Flash Logo Image</source>
-        <translation>Logo Image flashen</translation>
+        <translation>Logo Abbild installieren</translation>
     </message>
     <message>
         <location filename="../res/ui/flash.ui" line="26"/>
@@ -154,88 +154,100 @@
         <translation>Datei</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="1111"/>
+        <location filename="../res/ui/mainwindow.ui" line="1112"/>
         <source>Info</source>
         <translation>Info</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="1158"/>
+        <location filename="../res/ui/mainwindow.ui" line="1160"/>
         <source>Open</source>
         <translation>Öffnen</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="1161"/>
-        <location filename="../res/ui/mainwindow.ui" line="1164"/>
+        <location filename="../res/ui/mainwindow.ui" line="1163"/>
+        <location filename="../res/ui/mainwindow.ui" line="1166"/>
         <source>Open Logo Image</source>
-        <translation>Logo Image öffnen</translation>
+        <translation>Logo Abbild öffnen</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="1176"/>
+        <location filename="../res/ui/mainwindow.ui" line="1178"/>
         <source>Save</source>
         <translation>Speichern</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="1179"/>
-        <location filename="../res/ui/mainwindow.ui" line="1182"/>
+        <location filename="../res/ui/mainwindow.ui" line="1181"/>
+        <location filename="../res/ui/mainwindow.ui" line="1184"/>
         <source>Save Logo Image</source>
-        <translation>Logo Image speichern</translation>
+        <translation>Logo Abbild speichern</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="1191"/>
+        <location filename="../res/ui/mainwindow.ui" line="1193"/>
         <source>Exit</source>
         <translation>Ende</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="1194"/>
-        <location filename="../res/ui/mainwindow.ui" line="1197"/>
+        <location filename="../res/ui/mainwindow.ui" line="1196"/>
+        <location filename="../res/ui/mainwindow.ui" line="1199"/>
         <source>Exit Program</source>
         <translation>Programm beenden</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="1206"/>
+        <location filename="../res/ui/mainwindow.ui" line="1208"/>
         <source>About</source>
         <translation>Über</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="1209"/>
-        <location filename="../res/ui/mainwindow.ui" line="1212"/>
+        <location filename="../res/ui/mainwindow.ui" line="1211"/>
+        <location filename="../res/ui/mainwindow.ui" line="1214"/>
         <source>About Program</source>
         <translation>Über das Programm</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="1221"/>
+        <location filename="../res/ui/mainwindow.ui" line="1223"/>
         <source>Help</source>
         <translation>Hilfe</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="1224"/>
-        <location filename="../res/ui/mainwindow.ui" line="1227"/>
+        <location filename="../res/ui/mainwindow.ui" line="1226"/>
+        <location filename="../res/ui/mainwindow.ui" line="1229"/>
         <source>Show Help</source>
         <translation>Hilfe anzeigen</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="1236"/>
+        <location filename="../res/ui/mainwindow.ui" line="1238"/>
         <source>Flash</source>
-        <translation>Flashen</translation>
+        <translation>Installieren</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="1239"/>
-        <location filename="../res/ui/mainwindow.ui" line="1242"/>
-        <location filename="../mainwindow.cpp" line="327"/>
+        <location filename="../res/ui/mainwindow.ui" line="1241"/>
+        <location filename="../res/ui/mainwindow.ui" line="1244"/>
+        <location filename="../mainwindow.cpp" line="338"/>
         <source>Flash Logo Image</source>
-        <translation>Logo Image flashen</translation>
+        <translation>Logo Abbild installieren</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="1257"/>
-        <location filename="../res/ui/mainwindow.ui" line="1260"/>
+        <location filename="../res/ui/mainwindow.ui" line="1259"/>
+        <location filename="../res/ui/mainwindow.ui" line="1262"/>
         <source>Show Previous Logo</source>
         <translation>Vorheriges Logo anzeigen</translation>
     </message>
     <message>
-        <location filename="../res/ui/mainwindow.ui" line="1275"/>
-        <location filename="../res/ui/mainwindow.ui" line="1278"/>
+        <location filename="../res/ui/mainwindow.ui" line="1277"/>
+        <location filename="../res/ui/mainwindow.ui" line="1280"/>
         <source>Show Next Logo</source>
-        <translation>nächstes Logo anzeigen</translation>
+        <translation>Nächstes Logo anzeigen</translation>
+    </message>
+    <message>
+        <location filename="../res/ui/mainwindow.ui" line="1289"/>
+        <location filename="../res/ui/mainwindow.ui" line="1292"/>
+        <source>Dump</source>
+        <translation>Auslesen</translation>
+    </message>
+    <message>
+        <location filename="../res/ui/mainwindow.ui" line="1295"/>
+        <location filename="../res/ui/mainwindow.ui" line="1298"/>
+        <source>Dump Logo Image</source>
+        <translation>Logo Abbild auslesen</translation>
     </message>
     <message>
         <location filename="../res/ui/mainwindow.ui" line="103"/>
@@ -247,12 +259,12 @@
         <location filename="../res/ui/mainwindow.ui" line="805"/>
         <location filename="../res/ui/mainwindow.ui" line="922"/>
         <location filename="../res/ui/mainwindow.ui" line="1039"/>
-        <location filename="../mainwindow.cpp" line="105"/>
+        <location filename="../mainwindow.cpp" line="108"/>
         <source>Import Logo Screen</source>
         <translation>Logo Bildschirm importieren</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="113"/>
+        <location filename="../mainwindow.cpp" line="116"/>
         <source>Selected logo screen will be scaled from %1x%2 to %3x%4!</source>
         <translation>Der ausgewählte Logo-Bildschirm wird von %1x%2 bis %3x%4 skaliert!</translation>
     </message>
@@ -266,13 +278,13 @@
         <location filename="../res/ui/mainwindow.ui" line="828"/>
         <location filename="../res/ui/mainwindow.ui" line="945"/>
         <location filename="../res/ui/mainwindow.ui" line="1062"/>
-        <location filename="../mainwindow.cpp" line="125"/>
+        <location filename="../mainwindow.cpp" line="128"/>
         <source>Export Logo Screen</source>
         <translation>Logo Bildschirm exportieren</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="143"/>
-        <location filename="../mainwindow.cpp" line="158"/>
+        <location filename="../mainwindow.cpp" line="146"/>
+        <location filename="../mainwindow.cpp" line="161"/>
         <source>Logo screen export failed!
 
 %1</source>
@@ -281,19 +293,19 @@
 %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="147"/>
-        <location filename="../mainwindow.cpp" line="154"/>
+        <location filename="../mainwindow.cpp" line="150"/>
+        <location filename="../mainwindow.cpp" line="157"/>
         <source>Logo screen export successfull.</source>
         <translation>Logo Bildschirm erfolgreich exportiert.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="174"/>
-        <location filename="../mainwindow.h" line="52"/>
+        <location filename="../mainwindow.cpp" line="177"/>
+        <location filename="../mainwindow.h" line="54"/>
         <source>Import Logo Image</source>
         <translation>Logo Abbild importieren</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="185"/>
+        <location filename="../mainwindow.cpp" line="188"/>
         <source>Doesn&apos;t look like a supported logo image!
 
 No &quot;LOGO!!!!&quot; header @ 0x4000...</source>
@@ -302,7 +314,7 @@ No &quot;LOGO!!!!&quot; header @ 0x4000...</source>
 Kein &quot;LOGO!!!!!&quot; Header @ 0x4000...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="257"/>
+        <location filename="../mainwindow.cpp" line="260"/>
         <source>More than 9 logo screens found!
 
 This is not supported yet...</source>
@@ -311,7 +323,7 @@ This is not supported yet...</source>
 Dies wird noch nicht unterstützt...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="290"/>
+        <location filename="../mainwindow.cpp" line="293"/>
         <source>Could not open logo image!
 
 %1</source>
@@ -320,17 +332,17 @@ Dies wird noch nicht unterstützt...</translation>
 %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="299"/>
+        <location filename="../mainwindow.cpp" line="302"/>
         <source>Export Logo Image</source>
         <translation>Logo Abbild exportieren</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="314"/>
+        <location filename="../mainwindow.cpp" line="317"/>
         <source>Logo image saved successfully.</source>
         <translation>Logo Abbild erfolgreich gespeichert.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="318"/>
+        <location filename="../mainwindow.cpp" line="321"/>
         <source>Could not save logo image!
 
 %1</source>
@@ -339,16 +351,25 @@ Dies wird noch nicht unterstützt...</translation>
 %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="325"/>
-        <source>Flashing wrong logo image may brick your device!
+        <location filename="../mainwindow.cpp" line="328"/>
+        <source>Dumping logo image needs root!
 
 Really continue?</source>
-        <translation>Das flashen eines falschen Logo Abbildes kann das Gerät beschädigen!
+        <translation>Das auslesen eines Logo Abbildes erfordert Root-Rechte!
 
 Wirklich weitermachen?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="498"/>
+        <location filename="../mainwindow.cpp" line="336"/>
+        <source>Flashing wrong logo image may brick your device!
+
+Really continue?</source>
+        <translation>Das installieren eines falschen Logo Abbildes kann das Gerät beschädigen!
+
+Wirklich weitermachen?</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="509"/>
         <source>Really exit program?</source>
         <translation>Programm wirklich beenden?</translation>
     </message>
@@ -390,7 +411,7 @@ Möchten Sie trotzdem die weitere Entwicklung des Projektes unterstützen?</tran
 <context>
     <name>flashDialog</name>
     <message>
-        <location filename="../flash.cpp" line="14"/>
+        <location filename="../flash.cpp" line="26"/>
         <source>Could not run command!
 
 %1</source>
@@ -399,7 +420,7 @@ Möchten Sie trotzdem die weitere Entwicklung des Projektes unterstützen?</tran
 %1</translation>
     </message>
     <message>
-        <location filename="../flash.cpp" line="79"/>
+        <location filename="../flash.cpp" line="111"/>
         <source>No device found!
 
 Connect device via usb and try again...</source>
@@ -408,7 +429,7 @@ Connect device via usb and try again...</source>
 Gerät via USB anschließen und erneut versuchen...</translation>
     </message>
     <message>
-        <location filename="../flash.cpp" line="89"/>
+        <location filename="../flash.cpp" line="121"/>
         <source>Unauthorized device found!
 
 Authorize on phone and try again...</source>
@@ -417,7 +438,7 @@ Authorize on phone and try again...</source>
 Am Telefon autorisieren und erneut versuchen...</translation>
     </message>
     <message>
-        <location filename="../flash.cpp" line="99"/>
+        <location filename="../flash.cpp" line="131"/>
         <source>No permissions for device!
 
 Fix and try again...</source>
@@ -426,7 +447,7 @@ Fix and try again...</source>
 Beheben und erneut versuchen...</translation>
     </message>
     <message>
-        <location filename="../flash.cpp" line="129"/>
+        <location filename="../flash.cpp" line="163"/>
         <source>Unsupported device detected!
 
 Use at your own risk and report model if succesfully...</source>
@@ -435,40 +456,69 @@ Use at your own risk and report model if succesfully...</source>
 Verwendung auf eigenes Risiko und bei Erfolg das Modell melden...</translation>
     </message>
     <message>
-        <location filename="../flash.cpp" line="132"/>
+        <location filename="../flash.cpp" line="183"/>
         <source>Start fastboot to flash logo image?</source>
-        <translation>Fastboot starten um Logo Image zu flashen?</translation>
+        <translation>Fastboot starten um Logo Abbild zu installieren?</translation>
     </message>
     <message>
-        <location filename="../flash.cpp" line="156"/>
+        <location filename="../flash.cpp" line="207"/>
         <source>Waiting for fastboot aborted!</source>
         <translation>Warten auf Fastboot abgebrochen!</translation>
     </message>
     <message>
-        <location filename="../flash.cpp" line="166"/>
+        <location filename="../flash.cpp" line="217"/>
         <source>Flashing logo image failed!
 
 See log for details...</source>
-        <translation>Logo Image flashen fehlgeschlagen!
+        <translation>Logo Abbild installieren fehlgeschlagen!
 
 Siehe Protokoll für Details...</translation>
     </message>
     <message>
-        <location filename="../flash.cpp" line="170"/>
+        <location filename="../flash.cpp" line="221"/>
         <source>Flashing logo image finished.
 
 Click OK to reboot device...</source>
-        <translation>Logo Image flashen fertig.
+        <translation>Logo Abbild installieren fertig.
 
 Auf OK klicken um das Gerät neu zu starten...</translation>
     </message>
     <message>
-        <location filename="../flash.cpp" line="179"/>
+        <location filename="../flash.cpp" line="177"/>
+        <location filename="../flash.cpp" line="254"/>
         <source>Unexpected response from device!</source>
         <translation>Unerwartete Reaktion des Geräts!</translation>
     </message>
     <message>
-        <location filename="../flash.cpp" line="192"/>
+        <location filename="../flash.cpp" line="13"/>
+        <source>Dump Logo Image</source>
+        <translation>Logo Abbild auslesen</translation>
+    </message>
+    <message>
+        <location filename="../flash.cpp" line="237"/>
+        <source>Access denied!
+
+Grant root permissions and try again...</source>
+        <translation>Zugriff verweigert!
+
+Root-Rechte erteilen und erneut versuchen...</translation>
+    </message>
+    <message>
+        <location filename="../flash.cpp" line="245"/>
+        <source>Dumping logo image finished.</source>
+        <translation>Logo Abbild auslesen fertig.</translation>
+    </message>
+    <message>
+        <location filename="../flash.cpp" line="249"/>
+        <source>Dumping logo image failed!
+
+See log for details...</source>
+        <translation>Logo Abbild auslesen fehlgeschlagen!
+
+Siehe Protokoll für Details...</translation>
+    </message>
+    <message>
+        <location filename="../flash.cpp" line="274"/>
         <source>Really abort running command?</source>
         <translation>Laufenden Befehl wirklich abbrechen?</translation>
     </message>
