@@ -16,7 +16,7 @@ private:
 
 	QProcess *process;
 	QString process_output;
-	QStringList devices = { "beryllium", "cepheus", "davinci", "dipper", "grus", "pyxis", "raphael", "raphaelin", "tucana" };
+	QStringList devices = { "beryllium", "cepheus", "crux", "davinci", "davinciin", "dipper", "equuleus", "grus", "phoenix", "phoenixin", "pyxis", "raphael", "raphaelin", "tucana", "ursa", "vela" };
 	QColor textcolor;
 	int fontweight;
 
