@@ -69,7 +69,7 @@ private:
 	quint32 logo_ofs[9];
 	quint32 logo_len[9];
 
-	void loadLogo(quint32, quint32, int);
+	bool loadLogo(quint32, quint32, int);
 	void saveLogo(QFile&, int);
 
 	quint32 calcLogo(int);

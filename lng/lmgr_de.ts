@@ -264,7 +264,7 @@
     <message>
         <location filename="../res/ui/mainwindow.ui" line="1245"/>
         <location filename="../res/ui/mainwindow.ui" line="1248"/>
-        <location filename="../mainwindow.cpp" line="338"/>
+        <location filename="../mainwindow.cpp" line="383"/>
         <source>Flash Logo Image</source>
         <translation>Logo Abbild installieren</translation>
     </message>
@@ -313,12 +313,12 @@
         <location filename="../res/ui/mainwindow.ui" line="805"/>
         <location filename="../res/ui/mainwindow.ui" line="922"/>
         <location filename="../res/ui/mainwindow.ui" line="1039"/>
-        <location filename="../mainwindow.cpp" line="108"/>
+        <location filename="../mainwindow.cpp" line="118"/>
         <source>Import Logo Screen</source>
         <translation>Logo Bildschirm importieren</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="116"/>
+        <location filename="../mainwindow.cpp" line="126"/>
         <source>Selected logo screen will be scaled from %1x%2 to %3x%4!</source>
         <translation>Der ausgewählte Logo-Bildschirm wird von %1x%2 bis %3x%4 skaliert!</translation>
     </message>
@@ -332,13 +332,13 @@
         <location filename="../res/ui/mainwindow.ui" line="828"/>
         <location filename="../res/ui/mainwindow.ui" line="945"/>
         <location filename="../res/ui/mainwindow.ui" line="1062"/>
-        <location filename="../mainwindow.cpp" line="128"/>
+        <location filename="../mainwindow.cpp" line="138"/>
         <source>Export Logo Screen</source>
         <translation>Logo Bildschirm exportieren</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="146"/>
-        <location filename="../mainwindow.cpp" line="161"/>
+        <location filename="../mainwindow.cpp" line="156"/>
+        <location filename="../mainwindow.cpp" line="171"/>
         <source>Logo screen export failed!
 
 %1</source>
@@ -347,19 +347,19 @@
 %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="150"/>
-        <location filename="../mainwindow.cpp" line="157"/>
+        <location filename="../mainwindow.cpp" line="160"/>
+        <location filename="../mainwindow.cpp" line="167"/>
         <source>Logo screen export successfull.</source>
         <translation>Logo Bildschirm erfolgreich exportiert.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="177"/>
+        <location filename="../mainwindow.cpp" line="187"/>
         <location filename="../mainwindow.h" line="64"/>
         <source>Import Logo Image</source>
         <translation>Logo Abbild importieren</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="188"/>
+        <location filename="../mainwindow.cpp" line="198"/>
         <source>Doesn&apos;t look like a supported logo image!
 
 No &quot;LOGO!!!!&quot; header @ 0x4000...</source>
@@ -368,7 +368,7 @@ No &quot;LOGO!!!!&quot; header @ 0x4000...</source>
 Kein &quot;LOGO!!!!!&quot; Header @ 0x4000...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="260"/>
+        <location filename="../mainwindow.cpp" line="296"/>
         <source>More than 9 logo screens found!
 
 This is not supported yet...</source>
@@ -377,7 +377,12 @@ This is not supported yet...</source>
 Dies wird noch nicht unterstützt...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="293"/>
+        <location filename="../mainwindow.cpp" line="305"/>
+        <source>Could not load logo screens!</source>
+        <translation>Konnte Logo Bildschirme nicht laden!</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="338"/>
         <source>Could not open logo image!
 
 %1</source>
@@ -386,17 +391,17 @@ Dies wird noch nicht unterstützt...</translation>
 %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="302"/>
+        <location filename="../mainwindow.cpp" line="347"/>
         <source>Export Logo Image</source>
         <translation>Logo Abbild exportieren</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="317"/>
+        <location filename="../mainwindow.cpp" line="362"/>
         <source>Logo image saved successfully.</source>
         <translation>Logo Abbild erfolgreich gespeichert.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="321"/>
+        <location filename="../mainwindow.cpp" line="366"/>
         <source>Could not save logo image!
 
 %1</source>
@@ -405,7 +410,7 @@ Dies wird noch nicht unterstützt...</translation>
 %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="328"/>
+        <location filename="../mainwindow.cpp" line="373"/>
         <source>Dumping logo image needs root!
 
 Really continue?</source>
@@ -414,7 +419,7 @@ Really continue?</source>
 Wirklich weitermachen?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="336"/>
+        <location filename="../mainwindow.cpp" line="381"/>
         <source>Flashing wrong logo image may brick your device!
 
 Really continue?</source>
@@ -423,7 +428,7 @@ Really continue?</source>
 Wirklich weitermachen?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="514"/>
+        <location filename="../mainwindow.cpp" line="559"/>
         <source>Really exit program?</source>
         <translation>Programm wirklich beenden?</translation>
     </message>

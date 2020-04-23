@@ -75,16 +75,26 @@ quint32 MainWindow::calcLogo(int pos)
 	return (static_cast<quint8>(data.at(1)) << 24 | static_cast<quint8>(data.at(0)) << 16 | static_cast<quint8>(data.at(3)) << 8 | static_cast<quint8>(data.at(2))) >> 4;
 }
 
-void MainWindow::loadLogo(quint32 ofs, quint32 len, int index)
+bool MainWindow::loadLogo(quint32 ofs, quint32 len, int index)
 {
 	QPixmap pm;
 	QLabel *img[9] = { label_1_img, label_2_img, label_3_img, label_4_img, label_5_img, label_6_img, label_7_img, label_8_img, label_9_img };
 	QLabel *txt[9] = { label_1_txt, label_2_txt, label_3_txt, label_4_txt, label_5_txt, label_6_txt, label_7_txt, label_8_txt, label_9_txt };
 
-	pm.loadFromData(logo.mid(ofs, len), "BMP");
+	bool result = pm.loadFromData(logo.mid(ofs, len), "BMP");
 
-	img[index]->setPixmap(pm);
-	txt[index]->setText(QString("%1 x %2\n").arg(pm.width()).arg(pm.height()) + "0x" + QString("%1\n").arg(ofs, 8, 16, QChar('0')).toUpper() + "0x" + QString("%1").arg(len, 8, 16, QChar('0')).toUpper());
+	if(result)
+	{
+		img[index]->setPixmap(pm);
+		txt[index]->setText(QString("%1 x %2\n").arg(pm.width()).arg(pm.height()) + "0x" + QString("%1\n").arg(ofs, 8, 16, QChar('0')).toUpper() + "0x" + QString("%1").arg(len, 8, 16, QChar('0')).toUpper());
+	}
+	else
+	{
+		img[index]->setPixmap(QPixmap(":/png/png/warning.png").scaled(128, 128, Qt::KeepAspectRatio));
+		txt[index]->setText("\n?\n");
+	}
+
+	return result;
 }
 
 void MainWindow::saveLogo(QFile &file, int index)
@@ -192,6 +202,7 @@ bool MainWindow::on_actionOpen_triggered()
 				int index = 0;
 				int logos = 0;
 				bool mixed = true;
+				bool failed = false;
 				quint32 val1, val2;
 
 				startscreen = 0;
@@ -208,6 +219,27 @@ bool MainWindow::on_actionOpen_triggered()
 
 				actionPrevLogo->setEnabled(false);
 				actionNextLogo->setEnabled(false);
+
+				pushButton_1_imp->setEnabled(false);
+				pushButton_2_imp->setEnabled(false);
+				pushButton_3_imp->setEnabled(false);
+				pushButton_4_imp->setEnabled(false);
+				pushButton_5_imp->setEnabled(false);
+				pushButton_6_imp->setEnabled(false);
+				pushButton_7_imp->setEnabled(false);
+				pushButton_8_imp->setEnabled(false);
+				pushButton_9_imp->setEnabled(false);
+				pushButton_1_exp->setEnabled(false);
+				pushButton_2_exp->setEnabled(false);
+				pushButton_3_exp->setEnabled(false);
+				pushButton_4_exp->setEnabled(false);
+				pushButton_5_exp->setEnabled(false);
+				pushButton_6_exp->setEnabled(false);
+				pushButton_7_exp->setEnabled(false);
+				pushButton_8_exp->setEnabled(false);
+				pushButton_9_exp->setEnabled(false);
+
+				actionSave->setEnabled(false);
 
 				if(logo.mid(calcLogo(0x4008), 2).toHex() == "424d" && logo.mid(calcLogo(0x400C), 2).toHex() == "424d")
 				{
@@ -239,7 +271,10 @@ bool MainWindow::on_actionOpen_triggered()
 							logo_ofs[index] = val1;
 							logo_len[index] = val2;
 
-							loadLogo(val1, val2, index);
+							if(!loadLogo(val1, val2, index))
+							{
+								failed = true;
+							}
 						}
 
 						index++;
@@ -255,7 +290,8 @@ bool MainWindow::on_actionOpen_triggered()
 				{
 					actionNextLogo->setEnabled(true);
 				}
-				else if(screens > 9)
+
+				if(screens > 9)
 				{
 					QMessageBox::warning(this, APPNAME, tr("More than 9 logo screens found!\n\nThis is not supported yet..."));
 
@@ -264,26 +300,35 @@ bool MainWindow::on_actionOpen_triggered()
 					return false;
 				}
 
-				pushButton_1_imp->setEnabled(true);
-				pushButton_2_imp->setEnabled(true);
-				pushButton_3_imp->setEnabled(true);
-				pushButton_4_imp->setEnabled(true);
-				pushButton_5_imp->setEnabled(true);
-				pushButton_6_imp->setEnabled(true);
-				pushButton_7_imp->setEnabled(true);
-				pushButton_8_imp->setEnabled(true);
-				pushButton_9_imp->setEnabled(true);
-				pushButton_1_exp->setEnabled(true);
-				pushButton_2_exp->setEnabled(true);
-				pushButton_3_exp->setEnabled(true);
-				pushButton_4_exp->setEnabled(true);
-				pushButton_5_exp->setEnabled(true);
-				pushButton_6_exp->setEnabled(true);
-				pushButton_7_exp->setEnabled(true);
-				pushButton_8_exp->setEnabled(true);
-				pushButton_9_exp->setEnabled(true);
+				if(failed)
+				{
+					QMessageBox::warning(this, APPNAME, tr("Could not load logo screens!"));
 
-				actionSave->setEnabled(true);
+					return false;
+				}
+				else
+				{
+					pushButton_1_imp->setEnabled(true);
+					pushButton_2_imp->setEnabled(true);
+					pushButton_3_imp->setEnabled(true);
+					pushButton_4_imp->setEnabled(true);
+					pushButton_5_imp->setEnabled(true);
+					pushButton_6_imp->setEnabled(true);
+					pushButton_7_imp->setEnabled(true);
+					pushButton_8_imp->setEnabled(true);
+					pushButton_9_imp->setEnabled(true);
+					pushButton_1_exp->setEnabled(true);
+					pushButton_2_exp->setEnabled(true);
+					pushButton_3_exp->setEnabled(true);
+					pushButton_4_exp->setEnabled(true);
+					pushButton_5_exp->setEnabled(true);
+					pushButton_6_exp->setEnabled(true);
+					pushButton_7_exp->setEnabled(true);
+					pushButton_8_exp->setEnabled(true);
+					pushButton_9_exp->setEnabled(true);
+
+					actionSave->setEnabled(true);
+				}
 
 				return true;
 			}
