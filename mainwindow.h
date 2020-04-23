@@ -2,8 +2,8 @@
 #define MAINWINDOW_H
 
 #define APPNAME "Logo Manager"
-#define APPVERS "1.0.0"
-#define APPDATE "17.04.2020"
+#define APPVERS "1.1.0"
+#define APPDATE "23.04.2020"
 
 #include <QApplication>
 #include <QMainWindow>
